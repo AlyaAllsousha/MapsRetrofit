@@ -9,4 +9,7 @@ class TagRepository(
     suspend fun fetchTags() = handle{
         service.getTags()
     }
+    suspend fun createTag(latitude:Float,longitude:Float, description:String) = handle{
+        service.createTag(latitude,longitude, description)
+    }
 }

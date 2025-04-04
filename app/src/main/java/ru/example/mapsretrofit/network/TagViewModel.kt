@@ -21,4 +21,8 @@ class TagViewModel(val tagRepository:TagRepository):ViewModel(){
             }
         )
     }
+    fun createTag(latitude:Float,longitude:Float, description:String) = GlobalScope.launch {
+        tagRepository.createTag(latitude,longitude, description)
+    }
+
 }
